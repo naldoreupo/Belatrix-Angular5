@@ -1,5 +1,5 @@
 
-import { NgModule } from '@angular/core';
+import { NgModule, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../_models/article.model';
@@ -12,17 +12,17 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./articles-list.component.scss']
 })
 export class ArticlesListComponent implements OnInit {
+  @Input()  articles: Article[];
   title = 'awoifkashfk!';
-  articles: Article[];
   listObservable: any;
 
   constructor(private articleService: ArticlesService) {
   }
   ngOnInit() {
-    this.loadList('id');
+   // this.loadList('id');
   }
 
-  sortingBy(sortValue : string) {
+  /*sortingBy(sortValue : string) {
     this.loadList(sortValue);
   }
 
@@ -37,6 +37,6 @@ export class ArticlesListComponent implements OnInit {
         console.log("finalize");
       }
     )
-  }
+  }*/
 
 }

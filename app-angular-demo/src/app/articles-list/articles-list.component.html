@@ -1,13 +1,4 @@
 
-<div  style="width: 150px;">
-  
-<a routerLink="NewArticle" class="header item" routerLinkActive="active-link">Add Aritcle</a> 
-<select class="ui fluid selection dropdown" (change) ="sortingBy($event.target.value)">
-    <option  value="">Select</option>
-    <option  value="title">title</option>
-    <option  value="votes">votes</option>
-</select>  
-</div>
 
 <div class="ui grid posts">
   <app-article *ngFor="let article of articles" [article]="article" class="row"></app-article>

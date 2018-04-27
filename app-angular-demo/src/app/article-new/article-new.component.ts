@@ -1,10 +1,9 @@
-import {NgForm} from '@angular/forms';
 import { NgModule } from '@angular/core';
+import {FormsModule,NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../_models/article.model';
 import { ArticlesService } from '../shared/articles.service';
-
 
 @Component({
   selector: 'app-article-new',
@@ -18,13 +17,9 @@ export class ArticleNewComponent implements OnInit {
   ngOnInit() {
   }
 
-  //addArticle(title,link) {
-  addArticle(f: NgForm) {
+  onSubmit(obj: NgForm) {
     debugger;
-    //console.log(title+link);
-
-    //this.articleService.newArticle(title,link).subscribe(
-   /* this.articleService.newArticle(title,link).subscribe(
+    this.articleService.newArticle(obj.value).subscribe(
     //  debugger;
       result => {
         debugger;
@@ -36,7 +31,7 @@ export class ArticleNewComponent implements OnInit {
       }, () => {
         console.log("");
       }
-    )*/
+    )
   }
 
 }

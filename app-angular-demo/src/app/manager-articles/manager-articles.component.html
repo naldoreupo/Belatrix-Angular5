@@ -1,12 +1,8 @@
 <div class="ui grid">
   <div class="four column row">
     <div class="ui main text container">
-       <div>
-         Count : {{ count$ | async  }} 
-         <button (click)="increment()">+</button>
-         <button (click)="decrement()">-</button>
-       </div>
-        <app-articles-list></app-articles-list>   
+       <app-article-filter #child1></app-article-filter>
+        <app-articles-list #child2></app-articles-list>   
     </div>
   </div>
 </div>

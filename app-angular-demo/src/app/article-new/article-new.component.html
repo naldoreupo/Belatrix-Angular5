@@ -1,15 +1,15 @@
 <div class="twelve wide column">
-  <form class="ui form"   >
+  <form class="ui form"  #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
     <div class="field" >
       <label>Title</label>      
-      <input type="text" name="title" ngModel   />
+      <input type="text" name="title" (ngModel)="title"  #title="ngModel"   />
     </div>
     <div class="field">
       <label >Link</label>
-      <input type="text"  name="link" ngModel/>
+      <input type="text"  name="link" (ngModel)="link"  #link="ngModel"  />
       </div>
       <div >
-        <button type="button" class="ui teal button" >Add</button>
+        <button type="submit" class="ui teal button" >Add</button>
       </div>
   </form>
 </div>

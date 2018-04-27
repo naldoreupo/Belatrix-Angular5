@@ -12,27 +12,19 @@ export class ArticlesService {
 
   }
 
-  addArticle(title:HTMLInputElement, link:HTMLInputElement){
-    this.articles.push(new Article(title.value, link.value,0));
-  }
 
   getList(sortValue : string):Observable<Article[]>{
       let jsonSent =   "_sort="+sortValue;
       return this.http.get<Article[]>(`${this.apiUrl}/articles?`+jsonSent).pipe();
   }
 
-  newArticle(title,link):Observable<Article>{
+  newArticle(pArticle:any):Observable<Article>{
     let params : HttpParams= new HttpParams;   
-    params =  params.set("title",title);
-    params =  params.set("link",link);  
+    //params =  params.set("title",title);
+   // params =  params.set("link",link);  
     
-    let jsonSent =
-    {
-      "title":title,
-      "link":link,
-      "votes":0
-    }    
+  console.log(pArticle);
  
-    return this.http.post<Article>(`${this.apiUrl}/articles`,jsonSent).pipe();   
+    return this.http.post<Article>(`${this.apiUrl}/articles`,pArticle).pipe();   
   }
 }
