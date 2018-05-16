@@ -13,6 +13,7 @@ import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store'
 import { CounterActions } from '../store/app.action';
 import { IAppState, rootReducer, INITIAL_STATE } from '../store/reducer';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     ManagerArticlesComponent,
     ArticlesListComponent,
     ArticleComponent,
-    ArticleNewComponent
+    ArticleNewComponent,
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule,
