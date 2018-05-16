@@ -1,22 +1,28 @@
 <!-- Menu Bar -->
+
 <div class="ui menu">
+    
     <div class="ui container">
       <a href="#" [routerLink]="['']"  class="header item">Home
-      </a>                 
+      </a>
+      
+      <a href="#" [routerLink]="['list']" class="header item">Articles</a>
+      <a href="#" [routerLink]="['list/new-article']" class="header item">New Article</a>
+      <a href="#" [routerLink]="['about']" class="header item">About</a>
+      <a href="#" [routerLink]="['/login']" class="header item">Log Out</a>
     
-<a routerLink="NewArticle" class="header item" routerLinkActive="active-link">Add Aritcle</a> 
+  
       <div class="header item borderless">
         <h1 class="ui header">
-          Simple App
+         My {{title}}
         </h1>
-       
       </div>
     </div>
   </div>
   <div class="">
+      <alert></alert>
       <router-outlet></router-outlet>
   </div>
   
   
   
-

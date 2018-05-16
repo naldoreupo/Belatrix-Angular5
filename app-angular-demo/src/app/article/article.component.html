@@ -15,7 +15,12 @@
   </a>
   <div class="meta">({{domain(article.link) }})</div>
   <ul class="ui big horizontal list voters">
+    
     <li class="item">
+        <a [routerLink]="['/edit-article',article.id]"> 
+          <i class="edit icon"></i>
+          edit
+       </a>
       <a href (click)="voteUp()">
         <i class="arrow up icon"></i>
         upvote 

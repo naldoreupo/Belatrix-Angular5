@@ -14,6 +14,11 @@ import { CounterActions } from '../store/app.action';
 import { IAppState, rootReducer, INITIAL_STATE } from '../store/reducer';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register';
+import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
+import { RouteComponent } from './shared/router.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,13 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
     ArticlesListComponent,
     ArticleComponent,
     ArticleNewComponent,
-    ArticleEditComponent
+    ArticleEditComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    AboutComponent,
+    RouteComponent
+    
   ],
   imports: [
     BrowserModule,

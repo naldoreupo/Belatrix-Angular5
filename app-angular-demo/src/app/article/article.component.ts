@@ -14,12 +14,16 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
 
   }
-  voteUp(): boolean {
-    this.article.voteUp();
+  voteUp(votes): boolean {
+    let currentVotes=+votes;
+    currentVotes += 1;
+    this.article.votes=currentVotes;
     return false;
   }
-  voteDown(): boolean {
-    this.article.voteDown();
+  voteDown(votes): boolean {
+    let currentVotes=+votes;
+    currentVotes -= 1;
+    this.article.votes=currentVotes;
     return false;
   }
   domain(link): string {

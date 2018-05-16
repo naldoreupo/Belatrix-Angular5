@@ -27,4 +27,14 @@ export class ArticlesService {
  
     return this.http.post<Article>(`${this.apiUrl}/articles`,pArticle).pipe();   
   }
+  
+  editArticle(pArticle:any):Observable<Article>{
+    let params : HttpParams= new HttpParams;   
+    //params =  params.set("title",title);
+   // params =  params.set("link",link);  
+    
+  console.log(pArticle);
+ 
+    return this.http.put<Article>(`${this.apiUrl}/articles`,pArticle).pipe();   
+  }
 }

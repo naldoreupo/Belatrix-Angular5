@@ -1,3 +1,20 @@
-<p>
-  article-edit works!
-</p>
+<div class="twelve wide column">
+  <form class="ui form"  #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
+    
+      <div class="field" >
+          <label>id</label>      
+          <input class="inputText" type="text" name="id" (ngModel)="id"  #title="ngModel"  disabled  />
+        </div>
+    <div class="field" >
+      <label>Title</label>      
+      <input  class="inputText" type="text" name="title" (ngModel)="title"  #title="ngModel"   />
+    </div>
+    <div class="field">
+      <label >Link</label>
+      <input  class="inputText" type="text"  name="link" (ngModel)="link"  #link="ngModel"  />
+      </div>
+      <div >
+        <button type="submit" class="ui teal button" >edit</button>
+      </div>
+  </form>
+</div>
